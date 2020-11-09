@@ -18,5 +18,23 @@ TEST(PerimeterTest, OneposOneneg) {
     EXPECT_EQ(r1.perimeter(), -1);
 }
 
+TEST(PerimeterTest, ZeroPerimeter)
+{
+	Rectangle r1(0,0);
+	EXPECT_EQ(0,r1.perimeter());
+}
+
+TEST(PerimeterTest, LargePerimeter)
+{
+	Rectangle r1(999,999);
+	EXPECT_EQ(3996,r1.perimeter());
+}
+
+TEST(PerimeterTest, NormalPerimeter)
+{
+	Rectangle r1(3,4);
+	EXPECT_EQ(14,r1.perimeter());
+}
+
 #endif //__PERIMETER_TEST_HPP__
 
