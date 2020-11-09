@@ -1,5 +1,5 @@
 #include <iostream>
-#include "rectangle.hpp"
+#include "../header/rectangle.hpp"
 
 Rectangle::Rectangle(int w, int h){
 	this->width = w;
