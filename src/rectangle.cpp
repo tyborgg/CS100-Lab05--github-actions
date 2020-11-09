@@ -28,19 +28,11 @@ int Rectangle::get_height(){
 }
 
 int Rectangle::area(){
-	if(width <= 0 || height <= 0){
-		cout << "Error: cannot accept negative or zero values" << endl;
-		return -1;
-	}
 
 	return width * height;
 }
 
 int Rectangle::perimeter(){
-	if(width <= 0 || height <= 0){
-                cout << "Error: cannot accept negative or zero values" << endl;
-                return -1;
-        }
 
 	int sideW = width * 2;
 	int sideH = height * 2;
