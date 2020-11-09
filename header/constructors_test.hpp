@@ -32,5 +32,23 @@ TEST(AreaTest, OneposOnenegH) {
     EXPECT_EQ(r1.get_height(),-2);
 }
 
+TEST(ConstructorTest, ZeroHeightAndWidth)
+{
+	Rectangle r1(0,0);
+	EXPECT_EQ(0,r1.get_height());
+}
+
+TEST(ConstructorTest, NegativeParameters)
+{
+	Rectangle r1(-2,-1);
+	EXPECT_EQ(-2,r1.get_width());
+}
+
+TEST(ConstructorTest, NormalParameters)
+{
+	Rectangle r1(3,4);
+	EXPECT_EQ(4,r1.get_height());
+}
+
 #endif //__CONSTRUCTORS_TEST_HPP__
 
