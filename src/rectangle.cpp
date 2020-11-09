@@ -1,6 +1,8 @@
 #include <iostream>
 #include "../header/rectangle.hpp"
 
+using namespace std;
+
 Rectangle::Rectangle(int w, int h){
 	this->width = w;
 	this->height = h;
@@ -27,7 +29,8 @@ int Rectangle::get_height(){
 
 int Rectangle::area(){
 	if(width <= 0 || height <= 0){
-		return "Error: cannot accept negative or zero values";
+		cout << "Error: cannot accept negative or zero values" << endl;
+		return -1;
 	}
 
 	return width * height;
@@ -35,11 +38,12 @@ int Rectangle::area(){
 
 int Rectangle::perimeter(){
 	if(width <= 0 || height <= 0){
-                return "Error: cannot accept negative or zero values";
+                cout << "Error: cannot accept negative or zero values" << endl;
+                return -1;
         }
 
 	int sideW = width * 2;
 	int sideH = height * 2;
-	int add = sideH + side W;
+	int add = sideH + sideW;
 	return add;
 }	
