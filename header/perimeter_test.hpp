@@ -21,7 +21,7 @@ TEST(PerimeterTest, OneposOneneg) {
 TEST(PerimeterTest, ZeroPerimeter)
 {
 	Rectangle r1(0,0);
-	EXPECT_EQ(0,r1.perimeter());
+	EXPECT_EQ(-1,r1.perimeter());
 }
 
 TEST(PerimeterTest, LargePerimeter)
