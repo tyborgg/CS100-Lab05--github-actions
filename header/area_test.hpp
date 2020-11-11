@@ -21,7 +21,7 @@ TEST(AreaTest, OneposOneneg) {
 TEST(AreaTest, ZeroArea)
 {
         Rectangle r1(0,0);
-        EXPECT_EQ(0,r1.area());
+        EXPECT_EQ(-1,r1.area());
 }
 
 TEST(AreaTest, LargeArea)

@@ -6,7 +6,7 @@ name: CI
 # events but only for the main branch
 on:
   push:
-    branches: [ main ]
+    branches: [ main, amidd001/failing_tests, tpast001/passing_tests ]
   pull_request:
     branches: [ main ]
 
@@ -24,12 +24,8 @@ jobs:
         with:
             submodules: recursive
       
-      - name: gen makefiles
-        run: 
-            cmake .
-      - name: run make
-        run: 
-            make
-      - name: create executable
-        run:
-            ./test
+      - name: Run a multi-line script
+        run: |
+          cmake .
+          make
+          ./test
